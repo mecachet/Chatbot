@@ -1,136 +1,112 @@
-/*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-/*basic reset*/
-* {margin: 0; padding: 0;}
-
-html {
-	height: 100%;
-	/*Image only BG fallback*/
-	
-	/*background = gradient + image pattern combo*/
-	background: 
-		linear-gradient(rgb(179, 255, 0), rgb(255, 217, 0));
-}
-
 body {
-	font-family: montserrat, arial, verdana;
-}
-/*form styles*/
-#msform {
-	width: 400px;
-	margin: 50px auto;
-	text-align: center;
-	position: relative;
-}
-#msform fieldset {
-	background: white;
-	border: 0 none;
-	border-radius: 3px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 20px 30px;
-	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
-	
-	/*stacking fieldsets above each other*/
-	position: relative;
-}
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-	display: none;
-}
-/*inputs*/
-#msform input, #msform textarea {
-	padding: 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	width: 100%;
-	box-sizing: border-box;
-	font-family: montserrat;
-	color: #2C3E50;
-	font-size: 13px;
-}
-/*buttons*/
-#msform .action-button {
-	width: 100px;
-	background: #27AE60;
-	font-weight: bold;
-	color: white;
-	border: 0 none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px;
-	margin: 10px 5px;
-  text-decoration: none;
-  font-size: 14px;
-}
-#msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-/*headings*/
-.fs-title {
-	font-size: 15px;
-	text-transform: uppercase;
-	color: #2C3E50;
-	margin-bottom: 10px;
-}
-.fs-subtitle {
-	font-weight: normal;
-	font-size: 13px;
-	color: #666;
-	margin-bottom: 20px;
-}
-/*progressbar*/
-#progressbar {
-	margin-bottom: 30px;
-	overflow: hidden;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
-}
-#progressbar li {
-	list-style-type: none;
-	color: white;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
-	float: left;
-	position: relative;
-}
-#progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background: white;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
-}
-/*progressbar connectors*/
-#progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
-}
-#progressbar li:first-child:after {
-	/*connector not needed before the first step*/
-	content: none; 
-}
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
-	color: white;
-}
-
-
-
+	background:#0b1d2a;
+  }
+  
+  .arrows {
+	  width: 60px;
+	  height: 72px;
+	  position: absolute;
+	  left: 85%;
+	  margin-left: -30px;
+	  bottom: 90px;
+  }
+  
+  .arrows path {
+	  stroke: #2994D1;
+	  fill: transparent;
+	  stroke-width: 1px;	
+	  animation: arrow 2s infinite;
+	  -webkit-animation: arrow 2s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows path.a1 {
+	  animation-delay:-1s;
+	  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+	  animation-delay:-0.5s;
+	  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 {	
+	  animation-delay:0s;
+	  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
+  :root{
+	--c1: #000000; 
+	--c2: #000000; 
+	--c3: #000000; 
+	--c4: #94dd34; 
+	--font1: work sans;
+	--font2: montserrat;
+  }
+    
+  .poison *{box-sizing:border-box;}
+  .poison{width:500px; margin:0 auto; border-radius:10px; box-shadow:0 0 60px rgba(50,50,50,0.2); overflow:hidden;}
+  
+  .poison top{width:100%; padding:20px 20px 20px 0; border-left:20px solid transparent; height:90px; padding-bottom:0; display:flex; justify-content:space-between; align-items:flex-start; position:relative; background:var(--c4); overflow:hidden;}
+  
+  .poison top img{width:38px; height:38px; border-radius:50%; object-fit:cover; margin-bottom:20px; z-index:6; position:relative; margin-top:6px; margin-right:6px;}
+  .poison top circle{width:50px; height:50px; border-radius:50%; margin-bottom:20px; z-index:6; position:absolute; border:3px solid var(--c3); top:20px; right:20px; box-shadow:0 0 80px var(--c3); transition:0.5s;}
+  .poison top status{width:15px; height:15px; display:block; border-radius:50%; position:absolute; bottom:20px; right:23px; background:var(--c2); z-index:7; transition:0.5s;}
+  
+  .poison top ctrls{display:flex;}
+  .poison top ctrls x{width:9px; height:9px; display:block; border-radius:50%; margin-right:7px;}
+  .poison top ctrls x:nth-child(1){background:var(--c2);}
+  .poison top ctrls x:nth-child(2){background:var(--c1);}
+  .poison top ctrls x:nth-child(3){background:var(--c3);}
+  
+  .poison info{position:absolute; bottom:0; left:20px; width:100%; display:flex; justify-content:flex-start; align-items:flex-end;}
+  .poison tab{width:auto; height:35px; border-radius:10px 10px 0 0; display:inline-flex; background:var(--c3); align-items:center; justify-content:space-between; font:400 10px var(--font2); color:var(--c4); text-transform:uppercase; padding:0 20px; letter-spacing:1px; z-index:8; transition:0.5s; transform:translateX(0); white-space:nowrap; left:0; bottom:0; position:absolute; z-index:5;} 
+  
+  .poison tab:before, .poison tab:after{content:""; display:block; background:var(--c3); height:10px; width:10px; position:absolute; bottom:0; left:-9px; z-index:2;}
+  .poison tab:after{left:auto; right:-8px;}
+  .poison tab left, .poison tab right{display:block; background:var(--c4); height:20px; width:20px; border-radius:50%; position:absolute; bottom:0; left:-20px; z-index:3;}
+  .poison tab right{left:auto; right:-20px;}
+  .poison tab > i{position:absolute; right:-30px; top:0; height:100%; color:var(--c3); font-size:15px; display:flex; align-items:center; transition:0.4s;}
+  .poison top:hover tab i{opacity:0;}
+  
+  .poison top:hover tab{left:calc(100% - 110px); transform: translateX(-100%);}
+  .poison top:hover tab left{background:var(--c4);}
+  .poison top:hover status{background:var(--c1);}
+  
+  .poison tab y{opacity:0;  color:var(--c3); transition:.4s; position:absolute; bottom:0; z-index:1; transform-origin:right; transform: translateX(calc(0%)); display:inline-flex; height:100%; align-items:center; justify-content:flex-end; z-index:5; font-weight:400;}
+  .poison tab y b{font-weight:500; margin-right:6px;}
+  .poison top:hover tab y{opacity:1; transform: translateX(calc(-100% - 40px))}
+  .poison top:hover circle{animation:1s spin normal forwards; box-shadow:0 0 160px var(--c4);}
+  
+  @keyframes spin{
+	from {transform:rotate(0deg); border-bottom:3px solid var(--c2);}
+	to {transform:rotate(270deg); border-bottom:3px solid var(--c1);}
+  }
+  
+  .poison dots{width:180px; height:180px; background-image:radial-gradient(var(--c1) 20%, transparent 0%); background-size:10px 10px; position:absolute; right:20px; top:20px; z-index:1; clip-path: polygon(0 0, 100% 100%, 100% 0);}
+  .poison dots:nth-of-type(2){right:auto; left:20px; top:auto; bottom:20px; clip-path: polygon(0 100%, 100% 100%, 0 0);}
+  
+  .poison main{width:100%; min-height:100px; background:var(--c3); display:block; padding:40px; position:relative;}
+  .poison .post{width:100%; border-radius:10px; background:#fff; padding:40px 50px; box-shadow:0 0 60px rgba(90,90,90,0.1); font:400 13px/185% var(--font1); letter-spacing:0.5px; color:var(--c4); text-align:justify; position:relative; z-index:2;}
+  
+  .post h1{font:700 20px var(--font2); text-transform:lowercase; color:var(--c2); margin-bottom:15px; text-align:left;}
+  .post h1 i{transform:rotate(0deg) translatey(6px); margin-left:5px; color:var(--c4);}
+  .post h2{font:600 14px var(--font2); text-transform:uppercase; letter-spacing:3px; color:var(--c1); padding-bottom:20px; text-align:left;}
+  .post b{color:var(--c2); font-weight:600; padding-bottom:1px; text-decoration:none; background:var(--c3);}
+  .post a{color:var(--c1); font-size:105%; font-weight:600; text-decoration:none;}
+  
+  
