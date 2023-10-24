@@ -101,7 +101,7 @@ body {
   .poison dots:nth-of-type(2){right:auto; left:20px; top:auto; bottom:20px; clip-path: polygon(0 100%, 100% 100%, 0 0);}
   
   .poison main{width:100%; min-height:100px; background:var(--c3); display:block; padding:40px; position:relative;}
-  .poison .post{width:100%; border-radius:10px; background:#fff; padding:40px 50px; box-shadow:0 0 60px rgba(90,90,90,0.1); font:400 13px/185% var(--font1); letter-spacing:0.5px; color:var(--c4); text-align:justify; position:relative; z-index:2;}
+  .poison .post{width:100%; border-radius:10px; background:#000000; padding:40px 50px; box-shadow:0 0 60px rgba(90,90,90,0.1); font:400 13px/185% var(--font1); letter-spacing:0.5px; color:var(--c4); text-align:justify; position:relative; z-index:2;}
   
   .post h1{font:700 20px var(--font2); text-transform:lowercase; color:var(--c2); margin-bottom:15px; text-align:left;}
   .post h1 i{transform:rotate(0deg) translatey(6px); margin-left:5px; color:var(--c4);}
