@@ -51,11 +51,10 @@ body {
   }
   :root{
 	--c1: #2994D1; 
-	--c2: #ff0000; 
+	--c2: #91ff00; 
 	--c3: #000000; 
 	--c4: #94dd34; 
-	--font1: work sans;
-	--font2: montserrat;
+
   }
     
   .poison *{box-sizing:border-box;}
