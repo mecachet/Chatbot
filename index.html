@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payunicard test</title>
-    <link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-  <svg class="arrows">
-    <path class="a1" d="M0 0 L30 32 L60 0"></path>
-    <path class="a2" d="M0 20 L30 52 L60 20"></path>
-    <path class="a3" d="M0 40 L30 72 L60 40"></path>
-  </svg>
-  <div class="poison">
-    <top>
-      <circle></circle><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/f7/b6/f2/f7b6f2f8-b4a1-ce21-c658-881491cc693d/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg">
-      <status></status>
-      <info>
-        <tab>
-          <left></left>
-          Payunicard Chatbot
-          <right></right>
-          <i class="ph-plus-light"></i>
-          <y>
-            შეტესტე
-          </y>
-        </tab>
-      </info>
-    </top>
-    <main>
-      <dots></dots>
-      <dots></dots>
-      <div class="post">
-        <h1>Qoute of the day</h1>
-        <h2> Never let your sense of morals prevent you from doing what is right.
-        </h2>
-        <h2> - Isaac Asimov </h2>
-      </div>
-    </main>
-  </div>
-  <script src="//code.tidio.co/tjmjcndmy4dojqjo1cb7zyjmpj5twvxe.js" async></script>
-</body>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <svg class="arrows">
+      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+      <path class="a2" d="M0 20 L30 52 L60 20"></path>
+      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    </svg>
+    <div class="poison">
+      <top>
+        <circle></circle
+        ><img
+          src="https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/f7/b6/f2/f7b6f2f8-b4a1-ce21-c658-881491cc693d/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
+        />
+        <status></status>
+        <info>
+          <tab>
+            <left></left>
+            Payunicard Chatbot
+            <right></right>
+            <i class="ph-plus-light"></i>
+            <y> შეტესტე </y>
+          </tab>
+        </info>
+      </top>
+      <main>
+        <dots></dots>
+        <dots></dots>
+        <div class="post">
+          <h1>Qoute of the day</h1>
+          <h2>
+            Never let your sense of morals prevent you from doing what is right.
+          </h2>
+          <h2>- Isaac Asimov</h2>
+        </div>
+      </main>
+    </div>
+    <script type="text/javascript" data-cfasync="false">
+      window.purechatApi = {
+        l: [],
+        t: [],
+        on: function () {
+          this.l.push(arguments);
+        },
+      };
+      (function () {
+        var done = false;
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = "https://app.purechat.com/VisitorWidget/WidgetScript";
+        document.getElementsByTagName("HEAD").item(0).appendChild(script);
+        script.onreadystatechange = script.onload = function (e) {
+          if (
+            !done &&
+            (!this.readyState ||
+              this.readyState == "loaded" ||
+              this.readyState == "complete")
+          ) {
+            var w = new PCWidget({
+              c: "89ce697d-ddd7-46f2-b979-41f8b34fec79",
+              f: true,
+            });
+            done = true;
+          }
+        };
+      })();
+    </script>
+    <script
+      src="//code.tidio.co/tjmjcndmy4dojqjo1cb7zyjmpj5twvxe.js"
+      async
+    ></script>
+  </body>
 </html>
