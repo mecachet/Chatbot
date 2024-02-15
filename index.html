@@ -41,51 +41,5 @@
         </div>
       </main>
     </div>
-    <script type="text/javascript">
-      window.$crisp = [];
-      window.CRISP_WEBSITE_ID = "7f1065bb-340e-417c-bfa2-dfb3984151e8";
-      (function () {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-      })();
-    </script>
-    <script type="text/javascript" data-cfasync="false">
-      window.purechatApi = {
-        l: [],
-        t: [],
-        on: function () {
-          this.l.push(arguments);
-        },
-      };
-      (function () {
-        var done = false;
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = "https://app.purechat.com/VisitorWidget/WidgetScript";
-        document.getElementsByTagName("HEAD").item(0).appendChild(script);
-        script.onreadystatechange = script.onload = function (e) {
-          if (
-            !done &&
-            (!this.readyState ||
-              this.readyState == "loaded" ||
-              this.readyState == "complete")
-          ) {
-            var w = new PCWidget({
-              c: "89ce697d-ddd7-46f2-b979-41f8b34fec79",
-              f: true,
-            });
-            done = true;
-          }
-        };
-      })();
-    </script>
-    <script
-      src="//code.tidio.co/tjmjcndmy4dojqjo1cb7zyjmpj5twvxe.js"
-      async
-    ></script>
   </body>
 </html>
